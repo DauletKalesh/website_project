@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block content %}
+    <div class="container content" style="text-align: center;">
+        <div style="display: inline-block; width: 300px;">
+            <h2>Login to ELITƎ</h2>
+            <form method="post" class="bootstrap-form">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <input type="submit" class="btn btn-success" value="Login">
+            </form>
+        </div>
+    </div>
+{% endblock %}

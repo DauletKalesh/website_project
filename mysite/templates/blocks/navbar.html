@@ -1,0 +1,21 @@
+<nav class="navbar navbar-expand-lg navbar-light justify-content-between" style="background-color: #9fcdff;">
+        <a class="navbar-brand" href="/" style="color: red; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: 30px;">ELITƎ</a>
+    <form class="form-inline mr-auto">
+        <input class="form-control form-control-sm mr-sm-2" type="search" placeholder="Search people" aria-label="Search">
+        <button class="btn btn-sm btn-outline-primary my-2 my-sm-0">Search</button>
+    </form>
+    <ul class="navbar-nav">
+        {% if user.is_authenticated %}
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'logout' %}">Log out</a>
+            </li>
+        {% else %}
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'login' %}">Login</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'register' %}">Registration</a>
+            </li>
+        {% endif %}
+    </ul>
+</nav>

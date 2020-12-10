@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block content %}
+    <div class="container content">
+        <h2 class="text-center">Welcome to our Website</h2>
+        <div class="text-center">
+            <img src="{% static 'img/network.png' %}">
+            <br>
+            <br>
+            <br>
+            <a href="{% url 'login' %}" class="btn btn-info">Login</a>
+            <a href="{% url 'register' %}" class="btn btn-primary">Registration</a>
+        </div>
+    </div>
+{% endblock %}
